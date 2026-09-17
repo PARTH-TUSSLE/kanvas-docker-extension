@@ -105,23 +105,9 @@ Guidance in this section applies **strictly to the `ui/` directory**. Backend
 Go code (`vm/`), Docker configurations, and root scripts are out of scope for
 Sistent.
 
-- **Component Reuse**:
-  - Prefer existing UI primitives from `@sistent/sistent` before creating
-    custom components or ad-hoc styles in `ui/`.
-- **Design Contract Reference**:
-  - For applicable tokens and component conventions, consult Sistent's design
-    contract.
-  - Prefer `node_modules/@sistent/sistent/DESIGN.md` when present in the
-    installed package.
-  - If unavailable locally, reference the Sistent design contract for the
-    pinned release matching `ui/package.json` ([v0.15.12 DESIGN.md][sistent-design-url]).
-    **Never reference Sistent's `master` branch**, as newer releases may contain
-    breaking changes or incompatible tokens.
-  - **Single Source of Truth**: Do not create or maintain a duplicate
-    `DESIGN.md` anywhere in this repository.
-- **Tokens and Styling**:
-  - Prefer existing Sistent tokens/theme values over introducing hardcoded
-    brand values or ad-hoc hex codes.
+- **Component Reuse:** Prefer existing `@sistent/sistent` UI primitives before creating custom components.
+- **Design Tokens:** Prefer existing Sistent theme/token values over hardcoded brand colors.
+- **Design Guidance Reference:** Consult `node_modules/@sistent/sistent/DESIGN.md` when available, or the Sistent release matching the pinned version in `ui/package.json`, rather than `master`. Do not create or maintain a separate `DESIGN.md` in this repository.
 
 ## Contribution Guidelines
 
@@ -141,4 +127,3 @@ Sistent.
   [CONTRIBUTING-gitflow.md](./CONTRIBUTING-gitflow.md).
 
 [repo-url]: https://github.com/layer5io/kanvas-docker-extension
-[sistent-design-url]: https://github.com/layer5io/sistent/tree/v0.15.12/DESIGN.md
